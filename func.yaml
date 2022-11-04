@@ -1,0 +1,26 @@
+specVersion: 0.34.0
+name: hello
+runtime: go
+registry: image-registry.openshift-image-registry.svc:5000/default
+image: ""
+imageDigest: ""
+created: 2022-11-04T15:08:54.052512341+05:30
+invocation:
+  format: http
+build:
+  buildpacks:
+  - paketo-buildpacks/go-dist
+  - ghcr.io/boson-project/go-function-buildpack:tip
+  builder: pack
+  buildEnvs: []
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: ""
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness
