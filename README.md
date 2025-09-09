@@ -1,4 +1,3 @@
-PAC
 ---
 
 # Go HTTP Function
